@@ -124,15 +124,19 @@ I'll list below a few usabilities of VMs:
 
 ## What is Rocky/Debian
 
-**Rocky Linux** and **Debian** are two popular *Linux distributions* (distros), each belonging to a different family of the Linux "ecosystem". They serve as foundations for many servers, cloud environments, and development machines.
+**Rocky Linux** and **Debian** are two popular *Linux distributions* (**distros**), each belonging to a different family of the Linux "ecosystem". They serve as foundations for many servers, cloud environments, and development machines.
 
 ### Red Hat Distro
+
+![image](https://github.com/user-attachments/assets/a4ecf95a-e100-4ef5-b62b-8fc37f4c257d)
 
 Rocky Linux is part of the **Red Hat family**, and it's designed to be a *100% bug-for-bug* **compatible** replacement for **Red Hat Enterprise Linux (RHEL)**. It was created after **CentOS** shifted focus to CentOS Stream.
 
 Ideal for **enterprise environments** and **production servers**. Focus on **stable** production environments, organizations migrating from **CentOS**.
 
 ### Debian Distro
+
+![image](https://github.com/user-attachments/assets/f5854b9e-8216-4af5-b20d-bce270a33937)
 
 Debian is a **community-driven** distro and the base for many others, including **Ubuntu**. It's known for its **stability**, **security**, and **strict open-source policies**.
 
@@ -142,15 +146,47 @@ A huuuge software repository **maintained by volunteers**. Different from Rocky 
 
 # Services
 
+In this section we'll discuss the services we'll use in the **Debian** distro in this project, since it's the distro I chose to work with. If you decided to go with Rocky Linux, [check this repository](https://github.com/Edu2metros/Guia-Rocky---Born2BeRoot-42) in Portuguese.
+
 ## UFW
+
+The **Uncomplicated Firewall** is a simplified interface used to *manage the Linux firewall*. It's easy to **allow** or **deny** ports, rules and connections.
+
+You can `ufw allow enable`, `ufw allow 4242`, and `ufw status` for basic manipulation.
+
+Check [this](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29) for more info.
 
 ## SSH
 
+This is a **safety protocol**, largely used to remotely access another PC through the command line. It's a **cryptografed connection**, authenticated through **password** or **public key**.
+
+You can `ssh <user>@<localhost/ip address> -p <portal>` to create this connection.
+
+Check [here](https://www.cloudflare.com/learning/access-management/what-is-ssh/) for more info.
+
 ## AppArmor
+
+**AppArmor** is a system of *obligatory control access* (**MAC**) for Linux, and it restricts what a program/file/folder can or cannot do. It's like a security guard allowing (or not) a file to work in your system.
+
+You can `aa-status` to check if it's working.
+
+Check [here](https://apparmor.net/) for more info.
 
 ## apt and aptitude
 
+They are both **package management tools** for Debian distros.
+
+- `apt` is a modern and simple package instaler, updater and remover.
+- `aptitude` is a little bit more robust, has a grafic interfave via terminal.
+![image](https://github.com/user-attachments/assets/649f8d15-3681-457c-a8b7-cdab0d3fbfe3)
+
+You can ~~and should~~ always `sudo apt update` && `sudo apt upgrade`.
+
 ## Sudo
+
+*Superuser Do*, or commonly know as **sudo** allows users to execute commands with **administrador** priviledges. The good part is that it avoids the constant use of commands with `root` users. It also registers the commands done in `/var/log/sudo/sudo.log`.
+
+You can visualize the sudo configurations in `/etc/sudoers`, or just `sudo visudo`.
 
 ---
 
