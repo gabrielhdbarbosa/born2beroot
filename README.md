@@ -30,6 +30,7 @@
   - [apt and aptitude](#apt-and-aptitude)
   - [Sudo](#Sudo)
 - [Monitoring.sh](#Monitoring.sh)
+  - [Crontab](#Crontab)
 - [Bonus](#Bonus)
   - [Wordpress statck](#Wordpress-stack)
   - [Partitions](#Partitions)
@@ -177,7 +178,8 @@ Check [here](https://apparmor.net/) for more info.
 They are both **package management tools** for Debian distros.
 
 - `apt` is a modern and simple package instaler, updater and remover.
-- `aptitude` is a little bit more robust, has a grafic interfave via terminal.
+- `aptitude` is a little bit more robust, has a grafic interface via terminal.
+
 ![image](https://github.com/user-attachments/assets/649f8d15-3681-457c-a8b7-cdab0d3fbfe3)
 
 You can ~~and should~~ always `sudo apt update` && `sudo apt upgrade`.
@@ -186,11 +188,44 @@ You can ~~and should~~ always `sudo apt update` && `sudo apt upgrade`.
 
 *Superuser Do*, or commonly know as **sudo** allows users to execute commands with **administrador** priviledges. The good part is that it avoids the constant use of commands with `root` users. It also registers the commands done in `/var/log/sudo/sudo.log`.
 
+![image](https://github.com/user-attachments/assets/68afaa8c-2a10-4e22-a6c8-a69234192b9b)
+
+
 You can visualize the sudo configurations in `/etc/sudoers`, or just `sudo visudo`.
 
 ---
 
 # Monitoring.sh
+
+The [monitoring.sh](https://github.com/mcombeau/Born2beroot/blob/main/monitoring.sh) script is a file that will hold a list of commands that will share your **PC status** at the reboot (`@reboot`) and from 10 to 10 minutes after that.
+
+![image](https://github.com/user-attachments/assets/941550e5-275d-4039-b0d1-962f86341166)
+
+It's great to learn a few commands that will show you how a PC works. A few examples are:
+
+- Architecture    : `uname`
+- CPUs            : `/proc/cpuinfo`
+- Memory Usage    : `free -h`
+- Disk Usage      : `df -h`
+- CPU Load        : `top -bn1`
+- Last Boot       : `who -b`
+- LVM use         : `lsblk`
+- TCP Connections : `/proc/net/sockstat`
+- Users logged    : `who`
+- Network         : `hostname -I` && `ip link show`
+- Sudo            : `/var/log/sudo/sudo.log`
+
+Check and test these commands in your terminal! You should try and understand what these commands are (be curious).
+
+## Crontab
+
+Cron is a **time-based job scheduler** used to run commands or scripts automatically at specified intervals in your Linux environment. It allows you to schedule tasks to run hourly, daily, weekly, or at custom times. During my peer evaluations and conversations with others, I noticed **at least three different ways** to approach and configure cron jobs.
+
+- You can **create a sleep.sh** file and call it with the `monitoring.sh` in the `/etc/crontab` file;
+- You can also edit the `/etc/crontab` and sleep 600 seconds to call `monitoring.sh`;
+- Or like me: call `montoring.sh` only `@reboot` and `*/10 * * * *`. It's easier to understand what's going on and easier to modify the `/etc/crontab` infos.
+
+![image](https://github.com/user-attachments/assets/3a7f99a8-cd44-4d66-b25a-87819c015781)
 
 ---
 
@@ -205,6 +240,11 @@ You can visualize the sudo configurations in `/etc/sudoers`, or just `sudo visud
 ---
 
 # Commands
+
+Below I'll list a few commands that it's going to be useful in this project. Figure out **how** and **where** you should use them:
+
+-
+
 
 ---
 
