@@ -19,9 +19,21 @@
 
 - [Summary](#Summary)
 - [Theory](#Theory)
+- [What is a Virtual Machine](##What-is-a-Virtual-Machine)
+- [How does a Virtual Machine works](##How-does-a-Virtual-Machine-works)
+- [What are the purposes of Virtual Machines](##What-are-the-purposes-of-Virtual-Machines)
+- [What is Rocky/Debian](##-What-is-Rocky/Debian)
 - [Services](#Services)
+- [UFW](##UFW)
+- [SSH](##SSH)
+- [AppArmor](##AppArmor)
+- [apt and aptitude](##apt-and-aptitude)
+- [Sudo](##Sudo)
 - [Monitoring.sh](#Monitoring.sh)
 - [Bonus](#Bonus)
+- [Wordpress statck](##Wordpress-stack)
+- [Partitions](##Partitions)
+- [FTP](##FTP)
 - [Commands](#Commands)
 - [Feedback](#Feedback)
 - [Contact](#Contact)
@@ -68,13 +80,13 @@ In other words, a **VM** is an **OS** running inside your computer — it can be
 
 ### Host Machine
 
-It's our physical computer, our **hardware**. Here we provide the hardware resources, such as **CPU**, **RAM**, **disk**, etc. On top of this structure we have our main Operating System, or the **host OS** (Windows, Mac, Linux).
+It's our physical computer, our **hardware**. Here we provide the hardware resources, such as **CPU**, **RAM**, **disk**, etc. On top of this structure we have our main **Operating System**, or the **host OS** (it could be Windows, Mac, Linux).
 
 ### Hypervisor
 
-It's a software layer that allows us to virtualize a machine, managing and allocating the hardware resources we destinated to our VM. We have basically two types of it:
-- Type 1: the **bare-metal** one, running directly on our hardware (VMware ESXi);
-- Type 2: the **hosted**, running on top of a host OS (**VirtualBox**, VMware Workstation).
+It's a software layer that allows us to virtualize a machine, **managing and allocating the hardware resources** we destinated to our VM. We have basically two types of it:
+- **Type 1**: the **bare-metal** one, running directly on our hardware (VMware ESXi);
+- **Type 2**: the **hosted**, running on top of a host OS (**VirtualBox**, VMware Workstation).
 
 ### Guest OS
 
@@ -87,6 +99,7 @@ For doing what we said above, the **hypervisor** emulates components like:
 - Virtual **RAM**;
 - Virtual **disk**;
 - Network interface card (**NIC**).
+
 These apper to the **host OS** as a running *software*, and for the **guest OS** as a real *hardware* (that's magic, buddy).
 
 ### Storage and Snapshots
@@ -106,7 +119,7 @@ I'll list below a few usabilities of VMs:
 - **Testing and Development**: you can test different OS for a software you're developing, in a safe envorionment, on the same PC. Ideal for **cross-platform compatibility tests**;
 - **Sandboxing and Isolation**: you can run potentially unsafe applications in a *secure environment* (one example is *Kali Linux* and other cybersecurity softwares), preventing **malwares** and **misconfigurations** from affecting the host OS;
 - **Server Virtualization**: same thing with **servers**, we can run different servers on a single physical server, reducing *hardware costs* and increasing *efficiency* in data centers;
-- **Learning**: what we are doing here! We can have access to different systems and do ~~with a very high probability~~ thing that could crash something, lol.
+- **Learning**: what we are doing here! We can have access to different systems and do ~~with a very high probability~~ things that could crash something, lol.
 - **Recovery**: very easy to recover something in case of a *system failure*, easy to migrate to other machines, and creating *backups*.
 - **Cloud Computing and Scalability**: VMs are the backbone of cloud services (*AWS*, *Azure*, *GCP*), being able to create, destroy, and scale dynamically based on demand.
 
@@ -135,6 +148,12 @@ I'll list below a few usabilities of VMs:
 ---
 
 # Bonus
+
+## Wordpress stack
+
+## Partitions
+
+## FTP
 
 ---
 
