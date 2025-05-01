@@ -112,7 +112,6 @@ The VM shares the physical hardware of the host, I think that's quite clear, rig
 
 ![Microsoft scheme](https://github.com/user-attachments/assets/8ef529ba-8c0b-4f99-8a93-403efab54caa)
 
-
 ## What are the purposes of Virtual Machines
 
 I'll list below a few usabilities of VMs:
@@ -124,8 +123,20 @@ I'll list below a few usabilities of VMs:
 - **Cloud Computing and Scalability**: VMs are the backbone of cloud services (*AWS*, *Azure*, *GCP*), being able to create, destroy, and scale dynamically based on demand.
 
 ## What is Rocky/Debian
+
+**Rocky Linux** and **Debian** are two popular *Linux distributions* (distros), each belonging to a different family of the Linux "ecosystem". They serve as foundations for many servers, cloud environments, and development machines.
+
 ### Red Hat Distro
+
+Rocky Linux is part of the **Red Hat family**, and it's designed to be a *100% bug-for-bug* **compatible** replacement for **Red Hat Enterprise Linux (RHEL)**. It was created after **CentOS** shifted focus to CentOS Stream.
+
+Ideal for **enterprise environments** and **production servers**. Focus on **stable** production environments, organizations migrating from **CentOS**.
+
 ### Debian Distro
+
+Debian is a **community-driven** distro and the base for many others, including **Ubuntu**. It's known for its **stability**, **security**, and **strict open-source policies**.
+
+A huuuge software repository **maintained by volunteers**. Different from Rocky Linux, it's ideal for **general-purpose servers and desktops**, uses *apt* and *aptitude* package managers, and it's base for customized distros like **Ubuntu** and **Kali Linux**.
 
 ---
 
