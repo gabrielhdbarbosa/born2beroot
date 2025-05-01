@@ -55,7 +55,9 @@ This project emphasizes **reproducibility**, **security**, and foundational **De
 ## What is a Virtual Machine
 
 A **Virtual Machine (VM)** is essentially an **Operating System (OS)** running inside your **Personal Computer (PC)**. It uses your computer’s hardware resources to run the OS of the virtual system you created.
-To achieve this, we use a layer called a **Hypervisor** (such as **VirtualBox**, in our case). A hypervisor is a software that enables us to run a virtual system independently of the host's physical hardware.
+To achieve this, we use a layer called a **Hypervisor** (such as **VirtualBox**, in our case).
+
+A *hypervisor* is a software that enables us to run a virtual system *independently* of the host's *physical hardware*.
 In other words, a **VM** is an **OS** running inside your computer — it can be the **same OS** as your host machine, or a **different** one entirely! Isn't it interesting?!
 
 ![Wikipedia scheme](https://github.com/user-attachments/assets/c4ce62a8-7a02-4e8b-abce-502fdcbf7075)
