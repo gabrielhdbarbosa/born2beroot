@@ -1,9 +1,9 @@
 
 # Born2beroot
 
-![42](https://img.shields.io/badge/-42-black?style=for-the-badge&logo=42&logoColor=white)
+![image](https://github.com/user-attachments/assets/f79f0cf8-cddb-42e4-96ff-64d95a6a9578)
 
-<imagem_aqui>
+![42](https://img.shields.io/badge/-42-black?style=for-the-badge&logo=42&logoColor=white)
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 
