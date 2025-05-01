@@ -61,6 +61,8 @@ Bonus tasks involved:
 
 This project emphasizes **reproducibility**, **security**, and foundational **DevOps** skills using bare system tools.
 
+I used a few git repos, guidelines, etc. But two of them were very importanto for me: [mcombeau's](https://github.com/mcombeau/Born2beroot/tree/main) and [PedroZappa's](https://github.com/PedroZappa/42_Born2beRoot). Please, check these ones, awesome projects!!
+
 ---
 
 # Theory
@@ -137,7 +139,7 @@ Ideal for **enterprise environments** and **production servers**. Focus on **sta
 
 ### Debian Distro
 
-![image](https://github.com/user-attachments/assets/f5854b9e-8216-4af5-b20d-bce270a33937)
+![image](https://github.com/user-attachments/assets/1cce5873-4cd1-4890-949f-1b97e831dd20)
 
 Debian is a **community-driven** distro and the base for many others, including **Ubuntu**. It's known for its **stability**, **security**, and **strict open-source policies**.
 
@@ -190,7 +192,6 @@ You can ~~and should~~ always `sudo apt update` && `sudo apt upgrade`.
 
 ![image](https://github.com/user-attachments/assets/68afaa8c-2a10-4e22-a6c8-a69234192b9b)
 
-
 You can visualize the sudo configurations in `/etc/sudoers`, or just `sudo visudo`.
 
 ---
@@ -231,11 +232,37 @@ Cron is a **time-based job scheduler** used to run commands or scripts automatic
 
 # Bonus
 
+Let's get this project a little bit deeper...
+
 ## Wordpress stack
+
+The **WordPress stack** is a collection of software needed to run WordPress on a server. Here we use:
+
+- **Lightpd**   = Web server to handle HTTP requests;
+- **MariaDB**   = Database to store WordPress content and configuration;
+- **PHP**       = Server-side language that powers WordPress logic;
+- **Wordpress** = The CMS itself.
+
+After installing and setting these services, through your local web server you will be able to go to `http://localhost:8080` and see a full **Wordpress** configuration website!
 
 ## Partitions
 
+**Disk partitions** divide your physical disk into logical segments. This helps **organize** the system, **improve performance**, and **enhance security**.
+
+    /	       = Root filesystem – Contains the entire system. All paths start here.
+    /boot    = Boot loader and kernel – Holds GRUB, kernel images, and initrd.
+    /home    = User files and settings – Each user gets a subdirectory here.
+    swap     = Virtual memory – Used when RAM is full; acts as overflow space.
+    /tmp     = Temporary files – Used by apps for short-lived files; often cleared on reboot.
+    /srv     = Service data – Holds data for services like web or FTP (/srv/www).
+    /var     = Variable data – Logs, databases, mail spool, print queues, etc.
+    /var/log = System logs – Stores logs from system and apps (/var/log/syslog).
+
+Not all these paths need to be **separate partitions**, but isolating some (like /home, /var, /tmp, and swap) can improve **Security**, **Performance**, and **Maintenance**.
+
 ## FTP
+
+**FTP** is a protocol used to transfer files between computers over a network. By standard we use the **Port 21** for that. We run a `sudo apt install vsftpd` as a server daemon to run the installation. Just FYI the FTP is **not a safe** protocol, since it's **not encrypted**. For better use cases, **SFTP (via SSH)** is preferred over FTP due to its security.
 
 ---
 
@@ -243,8 +270,15 @@ Cron is a **time-based job scheduler** used to run commands or scripts automatic
 
 Below I'll list a few commands that it's going to be useful in this project. Figure out **how** and **where** you should use them:
 
--
+- `systemctl status <program>`;
+- `useradd` && `adduser`;
+- `gpasswd -a` && `gpasswd -d`;
+- `reboot`;
+- `chage`;
+- `id` && `id -u`;
+- `groups` && `getent group` && `id -g` && `groupadd`.
 
+There are tons of bash commands that you can use. If you see usability for them go for it!
 
 ---
 
